@@ -1,5 +1,7 @@
 # repro-bazel-nested-set
 
+Reproduction case for https://github.com/bazelbuild/bazel/issues/20862
+
 ```
 bazel --version
 ./write.sh a
