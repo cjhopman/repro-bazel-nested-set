@@ -1,4 +1,6 @@
 # !!!! Note that the readme's command disables this file, only modify it if you have it re-enabled!!!!
 
+build --disk_cache=~/.cache/bazel_repro_cache
+
 build --experimental_remote_merkle_tree_cache
-# build --experimental_remote_merkle_tree_cache_size=0 # This doesn't seem to fix it
+build --experimental_remote_merkle_tree_cache_size=0 # 0=Unlimited. Without this: the build seemingly never completes. With it: it takes over a minute.
