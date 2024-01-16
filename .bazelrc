@@ -1,3 +1,4 @@
+# !!!! Note that the readme's command disables this file, only modify it if you have it re-enabled!!!!
 
 build --experimental_remote_merkle_tree_cache
 # build --experimental_remote_merkle_tree_cache_size=0 # This doesn't seem to fix it
