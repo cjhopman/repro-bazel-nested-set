@@ -1,0 +1,1 @@
+workspace(name = "repro-bazel-nested-set")

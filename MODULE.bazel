@@ -1,0 +1,4 @@
+module(
+    name = "repro-bazel-nested-set",
+    version = "",
+)
