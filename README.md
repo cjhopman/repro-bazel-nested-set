@@ -1,13 +1,13 @@
 # repro-bazel-nested-set
 
-Reproduction case for https://github.com/bazelbuild/bazel/issues/20862
+Reproduction case for https://github.com/facebook/buck2/issues/735
 
 ```
-bazel --version
+buck2 --version
 ./write.sh a
-bazel --ignore_all_rc_files build --experimental_remote_merkle_tree_cache --experimental_remote_merkle_tree_cache_size=0 --disk_cache=~/.cache/bazel_repro_cache //:big
+buck2  build --prefer-local //:big
 ```
 
-The command takes approximately 2 minutes to complete on `bazelbuild/7.0.0`, and only a couple of seconds on `bazelbuild/6.4.0`
+The command takes approximately 1 minute to complete on recent buck2 and only a couple of seconds on `bazelbuild/6.4.0` with some other flags (see https://github.com/DavidANeil/repro-bazel-nested-set).
 
 Re-run `./write.sh` with a new string argument to bust the cache, if desired.
